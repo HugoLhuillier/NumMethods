@@ -1,5 +1,8 @@
 # Numerical methods - Final project
 
+[![Build Status](https://travis-ci.org/HugoLhuillier/NumMethods.svg?branch=master)](https://travis-ci.org/HugoLhuillier/NumMethods)
+
+
 This repository contains the code used for the term paper of the [Science Po's Numerical methods' class](https://github.com/ScPo-CompEcon/Syllabus). Please note that this project is also my Master's thesis, and that it is still very much work in progress.
 
 This repository is structured in the following way:
