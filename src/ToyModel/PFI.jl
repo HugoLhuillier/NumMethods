@@ -75,11 +75,11 @@ function pick_du(olg::ToyModel)
 
   if ut == "Log"
     du = (x) -> 1 / x
-  elseif ut == "CRAA"
+  elseif ut == "CRRA"
     du = (x) -> x^(-gamma)
   elseif ut == "Exp"
     du = (x) -> Exp(-gamma * x)
-  else
+  elseif ut == "Quad"
     du = (x) -> 1 - gamma * x
   end
 

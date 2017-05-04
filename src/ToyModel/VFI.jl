@@ -71,11 +71,11 @@ function pick_u(mod::ToyModel)
 
   if ut == "Log"
     du = (x) -> log(x)
-  elseif ut == "CRAA"
+  elseif ut == "CRRA"
     du = (x) -> (x^(1-gamma) - 1) / (1 - gamma)
   elseif ut == "Exp"
     du = (x) -> (1 - exp(-gamma * x)) / gamma
-  else
+  elseif ut == "Quad"
     du = (x) -> x - gamma * x^2 / 2
   end
 

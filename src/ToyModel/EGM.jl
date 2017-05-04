@@ -39,9 +39,9 @@ end
 function ToyModel(;R        = 1.01,
                   beta      = 0.98,
                   alpha     = 0.8,
-                  Pi        =  [0.3 0.7;
-                                0.7 0.3],
-                  inc       = [0.5, 6.],
+                  Pi        =  [0. 1.;
+                                1. 0.],
+                  inc       = [1., 6.],
                   max_a     = Void,
                   max_b     = Void,
                   grid_size = 100,
@@ -73,11 +73,11 @@ end
 function get_du(mo::ToyModel)
   if mo.ut == "Log"
     du = (x) -> 1 / x
-  elseif mo.ut == "CRAA"
+  elseif mo.ut == "CRRA"
     du = (x) -> x^(-mo.gamma)
   elseif mo.ut == "Exp"
     du = (x) -> Exp(-mo.gamma * x)
-  else
+  elseif mo.ut == "Quad"
     du = (x) -> 1 - mo.gamma * x
   end
   return du
@@ -87,11 +87,11 @@ end
 function get_idu(mo::ToyModel)
   if mo.ut == "Log"
     idu = (x) -> 1 / x
-  elseif mo.ut == "CRAA"
-    idu = (x) -> (1 / x)^(mo.gamma)
+  elseif mo.ut == "CRRA"
+    idu = (x) -> (1 / x)^(1 / mo.gamma)
   elseif mo.ut == "Exp"
     idu = (x) -> - log(x) / mo.gamma
-  else
+  elseif mo.ut == "Quad"
     idu = (x) -> (1 - x) / mo.gamma
   end
   return idu
