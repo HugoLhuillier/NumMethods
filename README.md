@@ -18,6 +18,7 @@ A key assumption of this model is the **impossibility for parents to commit** to
 
 As it is well known in the literature, this kind of models are two complex to be solved analytically - except in some special cases, and we rely on numerical methods to find the optimal behaviors of agents. Strategic interactions complicate further the task, and their implications are discussed in length in the paper.
 
+<<<<<<< HEAD
 <p align="center">
 <b>TABLE 1: Data vs. heterogenous agent models, De Nardi (2016)</b>
 <table class="tg">
