@@ -85,12 +85,14 @@ As it is well known in the literature, this kind of models are two complex to be
 
 <p align="center">
   <b>Figure 1: Numerical vs. analytical solutions</b>
-  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/num_vs_analytical.png" alt="Numerical vs. analytical" style="width: 550px;"/>
+  <br><br>
+  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/num_vs_analytical.png" alt="Numerical vs. analytical" style="width: 400px;"/>
 </p>
 
 #### General model
 
 <p align="center">
   <b>Figure 2: Age 1's savings</b>
-  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/GenModel/Policies/policies_1_1.png" alt="Young's savings" style="width: 550px;"/>
+  <br><br>
+  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/GenModel/Policies/policies_1_1.png" alt="Young's savings" style="width: 400px;"/>
 </p>
