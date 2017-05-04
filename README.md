@@ -1,6 +1,8 @@
 # Numerical methods - Final project
 
 [![Build Status](https://travis-ci.org/HugoLhuillier/NumMethods.svg?branch=master)](https://travis-ci.org/HugoLhuillier/NumMethods)
+[![Build Status](https://img.shields.io/badge/Toy%20Model-Done-brightgreen.svg)](https://github.com/HugoLhuillier/NumMethods/tree/master/src/ToyModel)
+[![Build Status](https://img.shields.io/badge/General%20Model-In%20progress-orange.svg)](https://www.github.com/HugoLhuillier/NumMethods/tree/master/src/GenModel)
 
 
 This repository contains the code used for the term paper of the [Science Po's Numerical methods' class](https://github.com/ScPo-CompEcon/Syllabus). Please note that this project is also my Master's thesis, and that it is still very much work in progress.
