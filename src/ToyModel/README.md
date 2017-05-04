@@ -25,12 +25,12 @@ On the contrary, VFI is much less accurate than the two other methods. This is d
 
 <p align="center">
   <b>Figure 2: Analytical vs. VFI</b>
-  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/ana_vs_vfi.png" alt="VFI poor performance" style="width: 700px;"/>
+  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/ana_vs_vfi.png" alt="VFI poor performance" style="width: 550px;"/>
 </p>
 
 Finally, in agreement with the literature, we find that the fastest algorithm is EGM, followed by PFI. As expected, VFI is the least performant algorithm of those three.
 
 <p align="center">
   <b>Figure 2: Analytical vs. VFI</b>
-  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/algo_perf.png" alt="VFI poor performance" style="width: 600px;"/>
+  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/algo_perf.png" alt="VFI poor performance" style="width: 500px;"/>
 </p>

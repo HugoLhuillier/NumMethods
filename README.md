@@ -92,5 +92,5 @@ As it is well known in the literature, this kind of models are two complex to be
 
 <p align="center">
   <b>Figure 2: Age 1's savings</b>
-  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/GenModel/Policies/policies_1_1.png" alt="Young's savings" style="width: 700px;"/>
+  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/GenModel/Policies/policies_1_1.png" alt="Young's savings" style="width: 550px;"/>
 </p>
