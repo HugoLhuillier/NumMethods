@@ -13,24 +13,24 @@ This model is solved numerically both using value function iteration, policy fun
 
 Both PFI and EGM match the analytical solutions - see Figure 1. The number of iteration is fast, between 4 and 5 for both EGM and PFI depending on the initial guess.
 
-<center>
-**Figure 1** *Analytical vs. numerical*
-<img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/num_vs_analytical.png" alt="Young's savings" style="width: 700px;"/>
-</center>
+<p align="center">
+  <b>Figure 1: Numerical vs. analytical solutions</b>
+  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/num_vs_analytical.png" alt="Numerical vs. analytical" style="width: 550px;"/>
+</p>
 
 On the contrary, VFI is much less accurate than the two other methods. This is due to
 
 1. the presence of strategic interaction. Mathematically, this translates into the presence of the derivative of the policy function in the first order condition. When using EGM or PFI, we give this information to the algorithm, helping it to understand better the problem.  This is not the case when we are doing VFI.
 1. the non-negativity constraint on transfers.
 
-<center>
-**Figure 2** *Analytical vs. VFI*
-<img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/ana_vs_vfi.png" alt="VFI poor performance" style="width: 700px;"/>
-</center>
+<p align="center">
+  <b>Figure 2: Analytical vs. VFI</b>
+  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/ana_vs_vfi.png" alt="VFI poor performance" style="width: 700px;"/>
+</p>
 
 Finally, in agreement with the literature, we find that the fastest algorithm is EGM, followed by PFI. As expected, VFI is the least performant algorithm of those three.
 
-<center>
-**Figure 3** *Performance*
-<img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/algo_perf.png" alt="VFI poor performance" style="width: 700px;"/>
-</center>
+<p align="center">
+  <b>Figure 2: Analytical vs. VFI</b>
+  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/algo_perf.png" alt="VFI poor performance" style="width: 600px;"/>
+</p>
