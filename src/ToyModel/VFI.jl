@@ -168,6 +168,10 @@ function init_values(mod::ToyModel)
   A  = zeros(length(mod.b_grid), length(mod.inc_vals))
   B  = zeros(length(mod.a_grid), length(mod.inc_vals))
 
+  for i in 1:length(mod.inc_vals)
+    VO[:,i] = log.(mod.R .* mod.a_grid)
+  end
+
   return VO, A, B
 end
 

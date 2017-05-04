@@ -3,16 +3,22 @@ module ToyPlot
 include("./../ToyModel/EGM.jl")
 include("./../ToyModel/PFI.jl")
 include("./../ToyModel/VFI.jl")
+using Plots, LaTeXStrings
 
-function cf(sol::Tuple, mo;save::Bool=false, isPFI::Bool=true)
-  beta, al, R      = mo.beta, mo.alpha, mo.R
+function cf(;save::Bool=false, isPFI::Bool=true)
+
   if isPFI
+    mo             = ToyPFI.ToyModel(grid_size = 20,max_a = 6.)
+    sol            = ToyPFI.ite(20,mo)
     y_p, y_r       = mo.inc_vals
     a_grid, b_grid = mo.asset_grid, mo.transfer_grid
   else
+    mo             = ToyEGM.ToyModel(grid_size = 20,max_a = 6.)
+    sol            = ToyEGM.ite(20,mo)
     y_p, y_r       = mo.inc
     a_grid, b_grid = mo.a_grid, mo.b_grid
   end
+  beta, al, R      = mo.beta, mo.alpha, mo.R
 
   # build the Markov strategy
   a_p(b::Float64) = beta * (y_p + b) / (1 + beta)
@@ -55,16 +61,16 @@ function cf(sol::Tuple, mo;save::Bool=false, isPFI::Bool=true)
   Plots.plot!(b_grid, a_p, line = (2, :dash), label = "Analytical", color = colors[3])
   Plots.scatter!(bs_p, a_p, markersize = 5, label = "Eq.", color = colors[4])
 
-  plot_b_p = Plots.plot(a_grid[1:50], sol[2][1:50,2], line = (2, :solid), label = "Num.", legendfont = font(6),
+  plot_b_p = Plots.plot(a_grid, sol[2][:,2], line = (2, :solid), label = "Num.", legendfont = font(6),
             ylim = [-0.3;0.3], title = "Transfer to rich", titlefont = font(10), xlab = L"a",
             grid = false, color = colors[2])
-  Plots.plot!(a_grid[1:50], b_p, line = (2, :dash), label = "Analytical", color = colors[3])
+  Plots.plot!(a_grid, b_p, line = (2, :dash), label = "Analytical", color = colors[3])
   Plots.scatter!(as_p, b_p, markersize = 5, label = "Eq.", color = colors[4])
 
-  plot_b_r = Plots.plot(a_grid[1:50], sol[2][1:50,1], line = (2, :solid), label = "Num.", legendfont = font(6),
+  plot_b_r = Plots.plot(a_grid, sol[2][:,1], line = (2, :solid), label = "Num.", legendfont = font(6),
             title = "Transfer to poor", titlefont = font(10), xlab = L"a",
             grid = false, color = colors[2])
-  Plots.plot!(a_grid[1:50], b_r, line = (2, :dash), label = "Analytical", color = colors[3])
+  Plots.plot!(a_grid, b_r, line = (2, :dash), label = "Analytical", color = colors[3])
   Plots.scatter!(as_r, b_r, markersize = 5, label = "Eq.", color = colors[4])
 
   plot_t   = Plots.plot(plot_a_p, plot_a_r, plot_b_p, plot_b_r, layout = 4)
@@ -111,16 +117,17 @@ function effiency(;grid_max=500)
     println("Currently @ $i out of $(length(max_g))")
     pfi_t[i] = @elapsed ToyPFI.getSol(grid_size=a);
     egm_t[i] = @elapsed ToyEGM.getSol(grid_size=a);
-    vfi_t[i] =
-    try
-      @elapsed ToyVFI.getSol(grid_size=a);
-    catch
-      NaN
+
+    t = @elapsed sol = ToyVFI.getSol(grid_size=a);
+    if typeof(sol) <: Tuple
+      vfi_t[i] = t
+    else
+      vfi_t[i] = NaN 
     end
   end
 
   return Plots.scatter(max_g, [vfi_t, pfi_t, egm_t], label = ["VFI" "PFI" "EGM"],
-                      title = "Algorithm speed", xlab = "Grid size", ylab = "Time (s)")
+                      xlab = "Grid size", ylab = "Time (s)")
 end
 
 end
