@@ -18,16 +18,8 @@ A key assumption of this model is the **impossibility for parents to commit** to
 
 As it is well known in the literature, this kind of models are two complex to be solved analytically - except in some special cases, and we rely on numerical methods to find the optimal behaviors of agents. Strategic interactions complicate further the task, and their implications are discussed in length in the paper.
 
-
-<center>
-**TABLE 1** *Data vs. heterogenous agent models, De Nardi (2016)*
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-s6z2{text-align:center}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-</style>
+<p align="center">
+<b>TABLE 1: Data vs. heterogenous agent models, De Nardi (2016)</b>
 <table class="tg">
   <tr>
     <th class="tg-031e"></th>
@@ -80,7 +72,7 @@ As it is well known in the literature, this kind of models are two complex to be
     <td class="tg-s6z2">100%</td>
   </tr>
 </table>
-</center>
+</p>
 
 
 **The motivation** to this model is twofold
@@ -91,14 +83,14 @@ As it is well known in the literature, this kind of models are two complex to be
 ### A glimpse on results
 #### Toy model
 
-<center>
-**Figure 1** *Numerical vs. analytical solutions*
-<img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/num_vs_analytical.png" alt="Numerical vs. analytical" style="width: 550px;"/>
-</center>
+<p align="center">
+  <b>Figure 1: Numerical vs. analytical solutions</b>
+  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/ToyModel/num_vs_analytical.png" alt="Numerical vs. analytical" style="width: 550px;"/>
+</p>
 
 #### General model
 
-<center>
-**Figure 2** *Age 1's savings*
-<img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/GenModel/Policies/policies_1_1.png" alt="Young's savings" style="width: 700px;"/>
-</center>
+<p align="center">
+  <b>Figure 2: Age 1's savings</b>
+  <img src="https://github.com/HugoLhuillier/NumMethods/blob/master/figures/GenModel/Policies/policies_1_1.png" alt="Young's savings" style="width: 700px;"/>
+</p>
