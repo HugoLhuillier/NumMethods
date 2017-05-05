@@ -1,4 +1,4 @@
-module PFI
+module GenPFI
 
 using Interpolations, ForwardDiff, NLsolve
 using QuantEcon

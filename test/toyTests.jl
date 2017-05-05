@@ -10,6 +10,8 @@ include("./../src/ToyModel/VFI.jl")
 # 2. The results correspond to the analical solution
 # 3. The algorithm converges
 
+info("Starting testing on toy model")
+
 @testset "re-usable functions" begin
   @testset "u, u' and inverse u'" begin
     # same functions for PFI, VFI and EGM
