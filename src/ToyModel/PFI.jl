@@ -203,8 +203,8 @@ function init_values(olg::ToyModel, isRand::Bool)
   b_g, a_g, inc, R   = olg.transfer_grid, olg.asset_grid, olg.inc_vals, olg.R
 
   if isRand
-    B_c         = randn(length(a_g), length(inc))
-    A_c         = randn(length(b_g), length(inc))
+    B_c       = randn(length(a_g), length(inc))
+    A_c       = randn(length(b_g), length(inc))
   else
     B_c       = zeros(length(a_g), length(inc))
     A_c       = zeros(length(b_g), length(inc))
