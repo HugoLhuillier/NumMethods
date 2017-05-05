@@ -1,8 +1,21 @@
 ## General model
 
-<p align="center">
 :rotating_light: :rotating_light: <b>Code in progress</b> :rotating_light: :rotating_light:
-<p/>
+
+So far, one can use the model to compute manually the first iteration of the algorithm, for the first three steps.
+
+```julia
+# initialize the model
+p   = GenPFI.Param(size = 10)
+U   = GenPFI.Utility(p)
+pol = GenPFI.Policies(p)
+# compute manually the first iteration, for the first three steps
+GenPFI.old4!(p,U,pol)
+GenPFI.young1!(p,U,pol)
+GenPFI.old3!(p,U,pol)
+```
+
+### Model
 
 Here, agents live for four periods: two of youth, and two of old ages. The stage game is the same as the one in the toy model. Due to the promising results obtained with policy function iteration in the toy model, and its easy extension to multi-dimensional problems, we use this method to solve numerically this model.
 

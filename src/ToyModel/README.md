@@ -1,5 +1,22 @@
 # Toy model
 
+To obtain directly the solution to the policy function algorithm, do
+
+```julia
+sol = ToyPFI.getSol() # you can also modify the default parameters here
+```
+
+If you want the model's parameters as well, do
+
+```julia
+mod = ToyPFI.ToyModel()  # you can still modify the default parameters here
+sol = ToyPFI.ite(20,mod) # first argument: maximal number of iteration.
+```
+
+The same commands hold for the other two algorithms.
+
+### Model
+
 In this version of the model, agents live only for two periods
 
   1. In the first period, newborns receive a given endowment, and a transfer from their parent.

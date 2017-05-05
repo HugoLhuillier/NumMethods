@@ -5,3 +5,5 @@ Plots
 LaTeXStrings
 NLsolve
 QuantEcon
+Logging
+ForwardDiff
